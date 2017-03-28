@@ -1,0 +1,26 @@
+{
+  "name": "react-native-pinch-zoom-view",
+  "version": "0.1.0",
+  "description": "A pinch-to-zoom view for React Native.",
+  "main": "index.js",
+  "peerDependencies": {
+    "react": ">=15.4.0",
+    "react-native": ">=0.41.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GuoChen-WHU/react-native-pinch-zoom-view.git"
+  },
+  "keywords": [
+    "pinch",
+    "zoom",
+    "view",
+    "react-native"
+  ],
+  "author": "Chen Guo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view/issues"
+  },
+  "homepage": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view#readme"
+}
