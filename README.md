@@ -15,10 +15,9 @@ A pinch-to-zoom view for React Native. All the components wrapped in the view is
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   TextInput
 } from 'react-native';
-import PinchZoomView from 'react-native-camera';
+import PinchZoomView from 'react-native-pinch-zoom-view';
 
 class APP extends Component {
   render() {
