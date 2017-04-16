@@ -78,10 +78,9 @@ export default class PinchZoomView extends Component {
     }
     // translate
     else if (gestureState.numberActiveTouches === 1) {
-      let dx = gestureState.dx / this.state.scale
-      let dy = gestureState.dy / this.state.scale
-
-      this.setState({ offsetX: this.state.lastX + dx, offsetY: this.state.lastY + dy });
+      let offsetX = this.state.lastX + gestureState.dx / this.state.scale;
+      let offsetY = this.state.lastY + gestureState.dy / this.state.scale;
+      this.setState({ offsetX, offsetY });
     }
   }
 
