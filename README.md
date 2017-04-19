@@ -4,11 +4,11 @@ A pinch-to-zoom view for React Native. All the components wrapped in the view is
 
 ## Install
 
-`npm install react-native-pinch-zoom --save`
+`npm install react-native-pinch-zoom-view --save`
 
 ## Usage
 
-`require` the `react-native-pinch-zoom` module and then use the `<PinchZoomView>` tag to wrap your content instead of `<View>`.
+`require` the `react-native-pinch-zoom-view` module and then use the `<PinchZoomView>` tag to wrap your content instead of `<View>`.
 
 ```javascript
 'use strict';
