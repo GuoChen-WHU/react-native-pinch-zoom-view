@@ -1,6 +1,6 @@
 {
   "name": "react-native-pinch-zoom-view",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A pinch-to-zoom view for React Native.",
   "main": "index.js",
   "peerDependencies": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view/issues"
   },
-  "homepage": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view#readme"
+  "homepage": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
