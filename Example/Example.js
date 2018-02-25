@@ -26,7 +26,7 @@ export default class Example extends Component {
         <View style={styles.divider}></View>
 
         <Text>Image</Text>
-        <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
+        <Image source={{uri: 'https://facebook.github.io/react/logo-og.png'}}
                style={styles.image} />
         <View style={styles.divider}></View>
         
