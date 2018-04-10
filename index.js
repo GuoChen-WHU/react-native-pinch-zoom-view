@@ -25,7 +25,8 @@ export default class PinchZoomView extends Component {
       offsetX: 0,
       offsetY: 0,
       lastX: 0,
-      lastY: 0
+      lastY: 0,
+      lastMovePinch: false
     },
     this.distant = 150;
   }
@@ -76,13 +77,17 @@ export default class PinchZoomView extends Component {
       let dy = Math.abs(e.nativeEvent.touches[0].pageY - e.nativeEvent.touches[1].pageY);
       let distant = Math.sqrt(dx * dx + dy * dy);
       let scale = distant / this.distant * this.state.lastScale;
-      this.setState({ scale });
+      this.setState({ scale, lastMovePinch: true });
     }
     // translate
     else if (gestureState.numberActiveTouches === 1) {
+      if (this.state.lastMovePinch) {
+        gestureState.dx = 0;
+        gestureState.dy = 0;
+      }
       let offsetX = this.state.lastX + gestureState.dx / this.state.scale;
       let offsetY = this.state.lastY + gestureState.dy / this.state.scale;
-      this.setState({ offsetX, offsetY });
+      this.setState({ offsetX, offsetY, lastMovePinch: false });
     }
   }
 
