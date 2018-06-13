@@ -43,12 +43,12 @@ export default class PinchZoomView extends Component {
     });
   }
 
-  _handleStartShouldSetPanResponder = (e, gestureState) => {
+  _handleStartShouldSetPanResponder = () => {
     // don't respond to single touch to avoid shielding click on child components
     return false;
   }
 
-  _handleMoveShouldSetPanResponder = (e, gestureState) => {
+  _handleMoveShouldSetPanResponder = gestureState => {
     return this.props.scalable 
       && (Math.abs(gestureState.dx) > 2 || Math.abs(gestureState.dy) > 2 || gestureState.numberActiveTouches === 2);
   }
@@ -62,7 +62,7 @@ export default class PinchZoomView extends Component {
     }
   }
 
-  _handlePanResponderEnd = (e, gestureState) => {
+  _handlePanResponderEnd = () => {
     this.setState({
       lastX: this.state.offsetX, 
       lastY: this.state.offsetY, 
