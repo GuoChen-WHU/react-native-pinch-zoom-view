@@ -14,11 +14,15 @@ export default class PinchZoomView extends Component {
 
   static propTypes = {
     ...viewPropTypes,
-    scalable: PropTypes.bool
+    scalable: PropTypes.bool,
+    minScale:PropTypes.number,
+    maxScale:PropTypes.number
   };
 
   static defaultProps = {
-    scalable: true
+    scalable: true,
+    minScale:0.5,
+    maxScale:2
   };
 
   constructor(props) {
@@ -81,7 +85,10 @@ export default class PinchZoomView extends Component {
       let dy = Math.abs(e.nativeEvent.touches[0].pageY - e.nativeEvent.touches[1].pageY);
       let distant = Math.sqrt(dx * dx + dy * dy);
       let scale = distant / this.distant * this.state.lastScale;
-      this.setState({ scale, lastMovePinch: true });
+      //check scale min to max hello
+      if ( scale < this.props.maxScale  && scale > this.props.minScale ){
+        this.setState({ scale, lastMovePinch: true });
+      }
     }
     // translate
     else if (gestureState.numberActiveTouches === 1) {
@@ -91,6 +98,7 @@ export default class PinchZoomView extends Component {
       }
       let offsetX = this.state.lastX + gestureState.dx / this.state.scale;
       let offsetY = this.state.lastY + gestureState.dy / this.state.scale;
+      // if ( offsetX < 0  || offsetY <  0 )
       this.setState({ offsetX, offsetY, lastMovePinch: false });
     }
   }
@@ -116,7 +124,5 @@ export default class PinchZoomView extends Component {
 const styles = StyleSheet.create({
  container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
   }
 });
