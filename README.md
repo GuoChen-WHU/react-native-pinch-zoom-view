@@ -37,8 +37,23 @@ AppRegistry.registerComponent('APP', () => APP);
 #### `scalable`
 
 Values: `true` or `false`
+Default: `true`
 
-In some cases, you may want to disable the pinch-zoom behaviour, just set `scalable={false}` on the component. The default value is `true`.
+In some cases, you may want to disable the pinch-zoom behaviour, just set `scalable={false}` on the component.
+
+### `minScale`
+
+Type: `Number`
+Default: `0.5`
+
+Minimum scaling.
+
+### `maxScale`
+
+Type: `Number`
+Default: `2`
+
+Maximum scaling.
 
 ## Example
 
