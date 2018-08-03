@@ -3,6 +3,9 @@
   "version": "0.1.7",
   "description": "A pinch-to-zoom view for React Native.",
   "main": "index.js",
+  "scripts": {
+    "prettify": "prettier --single-quote --write 'index.js'"
+  },
   "peerDependencies": {
     "react": ">=15.4.0",
     "react-native": ">=0.41.2"
@@ -25,5 +28,8 @@
   "homepage": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view#readme",
   "dependencies": {
     "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "prettier": "1.13.7"
   }
 }
