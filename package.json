@@ -1,6 +1,6 @@
 {
   "name": "react-native-pinch-zoom-view",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "A pinch-to-zoom view for React Native.",
   "main": "index.js",
   "scripts": {
