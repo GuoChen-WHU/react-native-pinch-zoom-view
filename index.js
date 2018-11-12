@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet, PanResponder, ViewPropTypes } from 'react-native';
 
 // Fallback when RN version is < 0.44
 const viewPropTypes = ViewPropTypes || View.propTypes;
 
-export default class PinchZoomView extends Component {
+export default class PinchZoomView extends PureComponent {
   static propTypes = {
     ...viewPropTypes,
     scalable: PropTypes.bool,
     minScale: PropTypes.number,
     maxScale: PropTypes.number,
-    onStartShouldSetPanResponder: PropTypes.func,
+    onStartShouldSetPanResponder: PropTypes.bool,
     onMoveShouldSetPanResponder: PropTypes.func,
     onPanResponderGrant: PropTypes.func,
     onPanResponderRelease: PropTypes.func,
@@ -51,9 +51,9 @@ export default class PinchZoomView extends Component {
   }
 
   _handleStartShouldSetPanResponder = (e, gestureState) => {
-    if (this.props.onStartShouldSetPanResponder) return this.props.onStartShouldSetPanResponder();
+    if (this.props.onStartShouldSetPanResponder) return this.props.onStartShouldSetPanResponder;
     // don't respond to single touch to avoid shielding click on child components
-    return false;
+    return true;
   };
 
   _handleMoveShouldSetPanResponder = (e, gestureState) => {
