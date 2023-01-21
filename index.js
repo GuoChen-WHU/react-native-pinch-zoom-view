@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, PanResponder, ViewPropTypes } from 'react-native';
+import { View, StyleSheet, PanResponder } from 'react-native';
+import ViewPropTypes from 'deprecated-react-native-prop-types';
 
 // Fallback when RN version is < 0.44
 const viewPropTypes = ViewPropTypes || View.propTypes;
