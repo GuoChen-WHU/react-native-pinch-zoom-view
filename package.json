@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/GuoChen-WHU/react-native-pinch-zoom-view#readme",
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "deprecated-react-native-prop-types": "^4.0.0",
   },
   "devDependencies": {
     "prettier": "1.13.7"
